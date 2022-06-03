@@ -24,6 +24,18 @@ module.exports = {
       accounts: [PRIVATE_KEY],
     },
   },
+  etherscan: {
+    apiKey: {
+      rinkeby: ETHERSCAN_API_KEY,
+    },
+  },
+  gasReporter: {
+    enabled: true,
+    currency: 'USD',
+    outputFile: 'gas-report.txt',
+    noColors: true,
+    // coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+  },
   solidity: '0.8.8',
   namedAccounts: {
     deployer: {
@@ -32,5 +44,8 @@ module.exports = {
     player: {
       default: 1,
     },
+  },
+  mocha: {
+    timeout: 300000, // 300 seconds max for running tests
   },
 }
